@@ -4,11 +4,13 @@ import Alert from './components/alert/alert'
 import Menu from './components/menu/menu'
 import MenuItem from './components/menu/menu-item'
 import SubMenu from './components/menu/sub-menu'
+import Icon from './components/icon/icon'
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <Icon icon="coffee" theme="danger" size="10x" />
         <Button className="custom" onClick={() => console.log(1)}>
           Hello
         </Button>

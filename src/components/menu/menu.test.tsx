@@ -76,6 +76,16 @@ describe('test Menu and MenuItem component', () => {
     expect(menuElement).toContainElement(disabledElement)
     expect(menuElement).toContainElement(xyzElement)
     expect(menuElement).toContainElement(dropDownElement)
+    // :scope 伪类指向当前元素，也就是 menuElement
+    // :root 指向整个 html 的根元素，通常用于设置 css 变量
+    // :root {
+    //   --main: #ffa822;
+    // }
+    //  使用方法
+    // div {
+    //   color: var(--basic);
+    // }
+    expect(menuElement.querySelectorAll(':scope > li').length).toBe(4)
     expect(activeElement).toHaveClass('menu-item is-active')
     expect(disabledElement).toHaveClass('menu-item is-disabled')
     expect(xyzElement).not.toHaveClass('is-active')

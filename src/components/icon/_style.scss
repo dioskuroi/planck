@@ -1,0 +1,6 @@
+// scss 循环 map
+@each $key, $val in $theme-colors {
+  .icon-#{$key} {
+    color: $val;
+  }
+}
